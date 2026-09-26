@@ -239,7 +239,7 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = {"name":"北辰三角洲地铁站附近酒店","lat":28.2396,"lng":112.9884};
+const HOTEL = {"name":"北辰三角洲地铁站附近酒店（仅10月3日晚）","lat":28.2396,"lng":112.9884};
 
 const DAYS = [
   {
@@ -347,14 +347,24 @@ const DAYS = [
     "color": "#3F86A3",
     "locations": [
       {
+        "name": "退房并寄存行李",
+        "lat": 28.2396,
+        "lng": 112.9884,
+        "type": "hotel",
+        "time": "10:30—11:00",
+        "desc": "北辰三角洲酒店只住一晚；办理退房后把4人的行李寄存在前台。",
+        "detail": "前一晚就和酒店确认退房时间及退房后寄存到几点。只带充电宝、证件、雨具和当天随身用品去橘子洲。",
+        "gmap": "北辰三角洲地铁站"
+      },
+      {
         "name": "杨裕兴面馆",
         "lat": 28.1933,
         "lng": 112.9749,
         "type": "food",
-        "time": "10:00",
-        "desc": "早餐吃原汤肉丝面或牛肉面，传统老字号粉面作为低负担开场。",
+        "time": "11:20",
+        "desc": "退房后去老城吃原汤肉丝面或牛肉面，作为早午餐。",
         "budget": "约¥15—25/人",
-        "detail": "不要为了早起排队；10点左右出门，吃完再去橘子洲。",
+        "detail": "行李留在酒店，不拖箱进老城区。吃完从五一广场换乘2号线去橘子洲。",
         "dianpingKeyword": "杨裕兴面馆 长沙",
         "xhsKeyword": "杨裕兴面馆 长沙",
         "gmap": "杨裕兴面馆 长沙 五一广场"
@@ -364,45 +374,58 @@ const DAYS = [
         "lat": 28.1656,
         "lng": 112.9565,
         "type": "spot",
-        "time": "11:30—14:00",
+        "time": "12:30—15:00",
         "desc": "全程只看青年毛泽东艺术雕塑与江边视野，不走完整个岛。",
         "budget": "入园免费；观光车全程¥40/人，单程¥25/人",
-        "detail": "2026年国庆公开信息：景区免费但需实名预约，开放约7:00—22:00；建议从橘子洲站入园，优先地铁，避开大桥拥堵。岛南北跨度约5公里，4人建议坐观光车直达洲头，再视体力步行拍照。预约入口：岳麓山橘子洲旅游区公众号；观光车可在“城发橘子洲”小程序购票。",
+        "detail": "2026年国庆公开信息：景区免费但需实名预约，开放约7:00—22:00；建议从橘子洲站入园，优先地铁。4人坐观光车直达洲头，再视体力步行拍照。15:00前离岛，给取行李和晚间安排留出缓冲。",
         "reserve": "https://whhlyt.hunan.gov.cn/whhlyt/news/sxxw/202609/t20260923_34070837.html",
         "gmap": "橘子洲青年毛泽东艺术雕塑"
       },
       {
-        "name": "回酒店休息",
+        "name": "回北辰三角洲取行李",
         "lat": 28.2396,
         "lng": 112.9884,
-        "type": "hotel",
-        "time": "15:00—16:30",
-        "desc": "回北辰三角洲补觉、洗澡、整理过夜用品；今晚不再塞景点。",
-        "detail": "橘子洲站 → 五一广场换乘1号线 → 北辰三角洲。预留地铁等候与人流时间。",
+        "type": "transport",
+        "time": "15:30—16:20",
+        "desc": "橘子洲结束后回原酒店取4人的行李，再直接打车去金色印象。",
+        "budget": "取行李后打车约¥35—50/车",
+        "detail": "地铁回酒店取行李；取完后4人带箱子建议直接打车到天心阁店，避免晚高峰换乘和搬运行李。",
         "gmap": "北辰三角洲地铁站"
+      },
+      {
+        "name": "金色印象·天心阁店（先放行李）",
+        "lat": 28.1848,
+        "lng": 112.9819,
+        "type": "hotel",
+        "time": "17:00",
+        "desc": "先到店确认过夜号、项目安排和行李存放，再轻装去吃晚饭。",
+        "budget": "项目费与过夜费以门店当天报价为准",
+        "detail": "务必提前电话确认：是否能在项目开始前寄存4人的行李、过夜取号时间、过夜费、同区安排和次日最晚离店时间。如果门店不接收提前寄存，就使用五一广场或黄兴广场附近正规行李寄存点。",
+        "dianpingKeyword": "金色印象 天心阁店 长沙",
+        "xhsKeyword": "金色印象 天心阁店 过夜",
+        "gmap": "长沙金色印象 天心阁店 城南西路228号"
       },
       {
         "name": "玉楼东",
         "lat": 28.1915,
         "lng": 112.9742,
         "type": "food",
-        "time": "17:30",
-        "desc": "第二顿湘菜选择传统菜式：剁椒鱼头、毛氏红烧肉、腊味合蒸。",
+        "time": "17:30—19:00",
+        "desc": "放好行李后吃传统湘菜：剁椒鱼头、毛氏红烧肉、腊味合蒸。",
         "budget": "人均约¥100—150",
-        "detail": "建议17:30前后入店，避开黄金晚餐峰值。4人点菜时控制荤菜数量，给后面的金色印象留空间。",
+        "detail": "17:30前后入店，避开黄金晚餐峰值。4人点菜时控制荤菜数量，给后面的金色印象项目留出消化时间。",
         "dianpingKeyword": "玉楼东 长沙 五一广场",
         "xhsKeyword": "玉楼东 长沙",
         "gmap": "玉楼东 长沙 五一广场"
       },
       {
-        "name": "金色印象·4K影音足体养生（天心阁店）",
+        "name": "返回金色印象过夜",
         "lat": 28.1848,
         "lng": 112.9819,
         "type": "hotel",
-        "time": "20:30—次日",
-        "desc": "建议优先确认天心阁店是否接受当晚过夜号，再决定晚餐后的路线。",
-        "budget": "项目费与过夜费以门店当天报价为准",
-        "detail": "公开信息显示天心阁店地址为城南西路228号海富大厦3层，营业约10:00—次日04:00。过夜通常需要线下排号、完成项目并另付过夜费，具体取号时间、房型、费用和最晚离店时间务必提前电话确认。4人可先问是否能安排同一区域。",
+        "time": "19:30—次日",
+        "desc": "回店完成项目并过夜，行李随身保管好证件和贵重物品。",
+        "detail": "普通营业时间与过夜政策可能在国庆调整，所有费用和离店时间以门店当天确认结果为准。",
         "dianpingKeyword": "金色印象 天心阁店 长沙",
         "xhsKeyword": "金色印象 天心阁店 过夜",
         "gmap": "长沙金色印象 天心阁店 城南西路228号"
@@ -417,14 +440,25 @@ const DAYS = [
     "color": "#4C956C",
     "locations": [
       {
+        "name": "金色印象寄存行李 / 市区寄存备选",
+        "lat": 28.1848,
+        "lng": 112.9819,
+        "type": "hotel",
+        "time": "09:30—10:00",
+        "desc": "离店时优先把行李寄存到14:00；若门店不能寄存，改用五一广场或黄兴广场附近正规寄存点。",
+        "budget": "市区寄存费用以平台当天显示为准",
+        "detail": "这是第三天路线能否轻装执行的关键。国庆前务必问金色印象能否离店后寄存；不能寄存时，在地图平台搜索“行李寄存 五一广场”，选择有人值守且营业到下午的点。",
+        "gmap": "长沙金色印象 天心阁店 城南西路228号"
+      },
+      {
         "name": "向群锅饺",
         "lat": 28.1879,
         "lng": 112.9759,
         "type": "food",
-        "time": "10:30",
-        "desc": "锅饺、米粉，作为过夜后的市井早餐。",
+        "time": "10:15",
+        "desc": "轻装去吃锅饺、米粉，作为过夜后的市井早餐。",
         "budget": "约¥15—30/人",
-        "detail": "公开信息显示常见营业时间约08:00—21:30，但老字号节假日可能排队，建议到店看队伍长度；如果排队过长，直接转附近米粉店。",
+        "detail": "节假日排队过长就换附近粉店，不为早餐消耗返程缓冲。",
         "dianpingKeyword": "向群锅饺 长沙",
         "xhsKeyword": "向群锅饺 长沙",
         "gmap": "向群锅饺 长沙 黄兴南路95号"
@@ -436,7 +470,7 @@ const DAYS = [
         "type": "spot",
         "time": "11:30—13:00",
         "desc": "老居民区、老房子改造、咖啡店和小店，适合感受城市日常。",
-        "detail": "潮宗街位于中山路口至营盘路口一带。只留1—1.5小时，重点看北正街、老建筑和街边店，不安排购物任务。",
+        "detail": "潮宗街位于中山路口至营盘路口一带。只留1—1.5小时，重点看北正街、老建筑和街边店。13:00左右离开，回寄存点取行李。",
         "gmap": "长沙潮宗街历史文化街区"
       },
       {
@@ -453,23 +487,24 @@ const DAYS = [
         "gmap": "长沙潮宗街 北正街 马复胜"
       },
       {
-        "name": "回酒店取行李",
-        "lat": 28.2396,
-        "lng": 112.9884,
+        "name": "回寄存点取行李",
+        "lat": 28.1848,
+        "lng": 112.9819,
         "type": "hotel",
-        "time": "14:00",
-        "desc": "从潮宗街回北辰三角洲取行李，预留地铁或打车缓冲。",
-        "gmap": "北辰三角洲地铁站"
+        "time": "13:30—14:00",
+        "desc": "从潮宗街回金色印象或市区寄存点取行李，不再返回北辰三角洲。",
+        "detail": "若行李存在五一广场附近，直接从潮宗街步行或短途打车取回；若仍在金色印象，从潮宗街打车约15—25分钟。",
+        "gmap": "长沙金色印象 天心阁店 城南西路228号"
       },
       {
-        "name": "北辰三角洲 → 长沙南站",
+        "name": "市区寄存点 → 长沙南站",
         "lat": 28.1456,
         "lng": 113.0386,
         "type": "transport",
-        "time": "16:00",
-        "desc": "返程至少提前2小时到站；若是国庆晚间高铁，建议更早出发。",
-        "budget": "打车约¥50/车；地铁约¥4/人",
-        "detail": "地铁：1号线到五一广场换乘2号线到长沙火车南站。行李多、下雨或道路拥堵时直接打车。",
+        "time": "15:00—16:00",
+        "desc": "取完行李后直接去长沙南站，国庆返程至少提前2小时到站。",
+        "budget": "打车约¥40—60/车；地铁约¥4/人",
+        "detail": "4人带行李优先打车；如道路明显拥堵，则从黄兴广场或五一广场乘地铁2号线直达长沙火车南站。",
         "gmap": "长沙南站"
       }
     ]
@@ -482,20 +517,20 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>长沙 · 烟火三日</h1><p class="subtitle">2026年10月3日—5日｜两男两女｜北辰三角洲住宿</p></div>
+<div class="hero"><h1>长沙 · 烟火三日</h1><p class="subtitle">2026年10月3日—5日｜两男两女｜北辰酒店仅住3日晚</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">节奏</div><div class="value">一天一个片区，少换乘</div></div>
+  <div class="info-card"><div class="label">住宿</div><div class="value">3日晚酒店<br>4日晚金色印象</div></div>
   <div class="info-card"><div class="label">必打卡</div><div class="value">橘子洲 1 个</div></div>
   <div class="info-card"><div class="label">重点</div><div class="value">本地小店与老街生活</div></div>
   <div class="info-card"><div class="label">预算</div><div class="value">约 ¥600—700/人</div></div>
 </div>
-<div class="pay-summary"><h4>先看结论</h4>3号走太平街—南门口老城线；4号只安排橘子洲，晚上去金色印象过夜；5号留在潮宗街附近后回酒店取行李。橘子洲需实名预约，金色印象过夜需提前确认取号与费用。</div>
-<div class="section-head">页面里的数据入口</div><div class="pay-summary">每个行程点都带有 <b>📍 导航</b>（Apple / Google / 高德选项）、<b>🧭 高德</b>直达按钮；餐饮和过夜点会出现 <b>📕 小红书</b>、<b>🍜 大众点评</b> App 深链及“网页”备用入口。搜索词已按店名、片区和菜品预填，打开后可继续看实时排队、评分和用户笔记。</div><div class="section-head">为什么这样排</div>
-<div class="route-bar"><strong>北辰三角洲</strong> 是北向住宿锚点，地铁1号线可直达五一广场、南门口；橘子洲通过五一广场换乘2号线。把美食集中在老城片区，避免为了某家名店来回跑。</div>
+<div class="pay-summary"><h4>先看结论</h4>3号入住北辰三角洲酒店；4号上午退房并寄存行李，游橘子洲后取箱子转移到金色印象；5号把行李留在金色印象或市区寄存点，走完潮宗街后直接去长沙南站，不再返回北辰三角洲。</div>
+<div class="section-head">行李闭环</div>
+<div class="route-bar"><strong>4号</strong> 酒店退房寄存 → 橘子洲 → 回酒店取行李 → 打车到金色印象先放行李。<br><strong>5号</strong> 金色印象或五一广场寄存 → 向群锅饺与潮宗街 → 取行李 → 长沙南站。</div>
 <div class="section-head">提前做的事</div>
-<div class="pay-summary"><div class="ok-text">✓ 橘子洲：提前实名预约，观光车可线上买</div><div class="warn">! 金色印象：提前问天心阁店过夜号、项目费、过夜费、同区安排</div><div>✓ 笨萝卜：17:00左右到，拒绝黄牛号</div></div>
+<div class="pay-summary"><div class="ok-text">✓ 北辰酒店：确认4号退房后可寄存到16:00左右</div><div class="warn">! 金色印象：确认过夜号、费用、4日晚提前放箱和5日离店后寄存</div><div>✓ 橘子洲：提前实名预约，观光车可线上买</div><div>✓ 笨萝卜：17:00左右到，拒绝黄牛号</div></div>
 <div class="section-head">信息核对</div>
-<div class="pay-summary">橘子洲最新开放、预约和观光车信息参考湖南省文化和旅游厅；长沙地铁首末班车参考长沙地铁官网；餐饮选择参考公开点评与本地街区报道。价格、营业和排队以国庆当天为准。</div>
+<div class="pay-summary">橘子洲最新开放、预约和观光车信息参考湖南省文化和旅游厅；长沙地铁首末班车参考长沙地铁官网。寄存、营业和排队以国庆当天为准，特别是金色印象的行李政策必须提前电话确认。</div>
 <div class="section-head">图例</div>
 <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--tint-red)"></div>餐厅</div><div class="legend-item"><div class="legend-dot" style="background:var(--tint-blue)"></div>景点</div><div class="legend-item"><div class="legend-dot" style="background:var(--tint-orange)"></div>酒店/过夜</div><div class="legend-item"><div class="legend-dot" style="background:var(--text-tertiary)"></div>交通</div></div>`;
 }
@@ -635,9 +670,9 @@ function locCard(loc, dayIdx) {
   let lnk = `<button class="btn nav" onclick="openAS('${loc.name.replace(/'/g,"\\'")}',${loc.lat},${loc.lng},'${gmapQ}')">📍 导航</button>`;
   lnk += `<button class="btn amap" onclick="openAmap('${loc.name.replace(/'/g,"\\'")}',${loc.lat},${loc.lng})">🧭 高德</button>`;
   if(loc.xhs||loc.xhsKeyword) {
-    const xhsHref = xhsWebUrl(loc);
-    const xhsLabel = '📕 小红书网页';
-    lnk += `<a href="${xhsHref}" target="_self" rel="noopener" class="btn xhs">${xhsLabel}</a>`;
+    const xhsHref = xhsAppUrl(loc);
+    const xhsSearch = `https://www.baidu.com/s?wd=${encodeURIComponent('site:xiaohongshu.com ' + xhsKeyword(loc))}`;
+    lnk += `<a href="${xhsHref}" target="_self" rel="noopener" class="btn xhs">📕 打开小红书 App</a><a href="${xhsSearch}" target="_self" rel="noopener" class="btn web">网页搜索</a>`;
   }
   const dpEnabled = loc.dianping !== false &&
     (loc.dianping || loc.dianpingKeyword || loc.type==='food' || loc.type==='drink');
